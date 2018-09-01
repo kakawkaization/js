@@ -1,11 +1,8 @@
 "use strict";
 
 var user = {
-	name: "Vasya",
-	hi: function() { alert(this.name); },
-	bye: function() { alert("Bye"); }
+	firstName: "Vasiliy",
+	export: this
 };
 
-user.hi();
-
-(user.name == "Vasya" ? user.hi : user.bye)();
+alert(user.export.firstName);
