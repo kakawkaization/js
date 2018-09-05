@@ -1,19 +1,18 @@
 "use strict";
 
-var ladder = {
-	step: 0,
-	up: function() {
-		this.step++;
-		return this;
-	},
-	down: function() {
-		this.step--;
-		return this;
-	},
-	showStep: function() {
-		alert(this.step);
-		return this;
-	}
-};
+function A() {
+	return { toString: function() {
+		return 1;
+	} }
+}
 
-ladder.up().up().showStep();
+function B() {
+	return { toString: function() {
+		return 1;
+	} }
+}
+
+var a  = new A;
+var b =  new B;
+
+alert(a == b);
