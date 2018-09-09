@@ -1,18 +1,21 @@
 "use strict";
 
-function A() {
-	return { toString: function() {
-		return 1;
-	} }
+function Calculator() {
+	this.read = function() {
+		this.a = +prompt("a", "");
+		this.b = +prompt("b", "");
+	}
+
+	this.sum = function() {
+		return this.a + this.b;
+	
+	this.mul = function() {
+
+	}
+
 }
 
-function B() {
-	return { toString: function() {
-		return 1;
-	} }
-}
+var calculalor = new Calculator();
 
-var a  = new A;
-var b =  new B;
-
-alert(a == b);
+calculalor.read();
+alert(calculalor.sum());
