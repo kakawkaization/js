@@ -1,21 +1,20 @@
 "use strict";
 
-function Calculator() {
-	this.read = function() {
-		this.a = +prompt("a", "");
-		this.b = +prompt("b", "");
+function Calculator(stringOp) {
+	var arr = [];
+
+	arr = stringOp.split(" ");
+
+	for(var i = 0; i < arr.length; i++) {
+		if(arr[i] == "+") {
+			return +(arr[0]) + +(arr[2]);
+		}
+		else if(arr[i] == "-") {
+			return +(arr[0]) - +(arr[2]);
+		}
 	}
-
-	this.sum = function() {
-		return this.a + this.b;
-	
-	this.mul = function() {
-
-	}
-
 }
 
-var calculalor = new Calculator();
+var calc = new Calculator;
 
-calculalor.read();
-alert(calculalor.sum());
+alert(Calculator("1 - 2"));
