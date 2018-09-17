@@ -15,6 +15,4 @@ function Calculator(stringOp) {
 	}
 }
 
-var calc = new Calculator;
-
 alert(Calculator("1 - 2"));
