@@ -1,19 +1,14 @@
 "use strict";
 
 function makeCounter() {
-    var currentCount = 1;
+    function counter() {
+        return counter.currentCount++;
+    }
+    counter.currentCount = 1;
 
-    return function () {
-        return currentCount++;
-    };
+    return counter;
 }
 
 var counter = makeCounter();
-
 alert(counter());
 alert(counter());
-alert(counter());
-
-var counter2 = makeCounter();
-
-alert(counter2());
