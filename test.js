@@ -1,14 +1,7 @@
 "use strict";
 
-function makeCounter() {
-    function counter() {
-        return counter.currentCount++;
-    }
-    counter.currentCount = 1;
+var sum = new Function("a, b", "return a + b");
 
-    return counter;
-}
+var a =1, b = 2;
 
-var counter = makeCounter();
-alert(counter());
-alert(counter());
+alert(sum(a, b));
