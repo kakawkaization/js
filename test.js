@@ -1,7 +1,17 @@
 "use strict";
 
-var sum = new Function("a, b", "return a + b");
+function makeBuffer() {
+    var buf = '';
 
-var a =1, b = 2;
+    return function buffer() {
+        return buf;
+    }
 
-alert(sum(a, b));
+    function buffer(a) {
+        buf += a;
+    }
+
+}
+
+var buffer = makeBuffer();
+alert(buffer());
