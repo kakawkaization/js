@@ -1,17 +1,20 @@
 "use strict";
 
 function makeBuffer() {
-    var buf = '';
+    var buf = "";
 
-    return function buffer() {
+    return function(a) {
+        return buf += a;
+    }
+
+    return function() {
         return buf;
     }
-
-    function buffer(a) {
-        buf += a;
-    }
-
 }
 
 var buffer = makeBuffer();
+
+buffer("hehe");
+buffer("tada")
 alert(buffer());
+
